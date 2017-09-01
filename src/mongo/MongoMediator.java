@@ -60,7 +60,6 @@ public class MongoMediator {
                 mongoClient.setReadPreference(ReadPreference.nearest());
                 return mongoClient;
 
-
         }
     }
     /**

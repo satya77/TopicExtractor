@@ -26,17 +26,10 @@ public class MongoSettings extends Settings {
         } catch (Exception e) {
             String err = "Error: Unable to load settings from file. Using default values.";
             System.out.println(err);
-            log.writeToFile(err, e);
         }
     }
 
-    /**
-     * Get Log writer
-     * @return reference to this programs log writer
-     */
-    public LogWriter getLogWriter() {
-        return log;
-    }
+
     /**
      * Get the name of the database that the files are to be written into
      * @return database name for the files to be written into
@@ -123,22 +116,14 @@ public class MongoSettings extends Settings {
         return prop.getProperty("MongoDBPassword").toCharArray();
     }
     /**
-     * Get the name of Text Collection for saving the txt content
-     * @return the name of the Text Collection
+     * Get the name of  Collection for saving the  content
+     * @return the name of the Collection
      */
-    public String getTextCollectionName() {
+    public String getCollectionName() {
 
-        return prop.getProperty("TextCollectionName");
+        return prop.getProperty("CollectionName");
     }
 
-    /**
-     * Get the name of HTML Collection for saving the html content
-     * @return the name of the HTML Collection
-     */
-    public String getHTMLCollectionName() {
-
-        return prop.getProperty("HTMLCollectionName");
-    }
 
     /**
      * Get the name of the id Field
@@ -149,122 +134,36 @@ public class MongoSettings extends Settings {
         return prop.getProperty("Field_Id");
     }
     /**
-     * Get the name of the article title Field
-     * @return the name of the article title  Field
+     * Get the name of the entity name
+     * @return the name of enitiy
      */
-    public String getFieldArticleTitle() {
+    public String getField_EntityName() {
 
-        return prop.getProperty("Field_ArticleTitle");
+        return prop.getProperty("Field_EntityName");
     }
     /**
-     * Get the name of the Feed name Field
-     * @return the name of the Feed name Field
+     * Get the name of the field for main topic
+     * @return the name of main topic
      */
-    public String getFieldFeedName() {
+    public String getField_MainTopic() {
 
-        return prop.getProperty("Field_FeedName");
+        return prop.getProperty("Field_MainTopic");
+    }
+
+    /**
+     * Get the name of the field for type of entity
+     * @return the name of type
+     */
+    public String getField_Type() {
+
+        return prop.getProperty("Field_Type");
     }
     /**
-     * Get the name of the Category name  Field
-     * @return the name of the Category name  Field
+     * Get the name of the field for related topics
+     * @return the name of related topics
      */
-    public String getFieldCategoryName() {
+    public String getField_RelatedTopicsr() {
 
-        return prop.getProperty("Field_CategoryName");
+        return prop.getProperty("Field_RelatedTopics");
     }
-    /**
-     * Get the name of the Feed Url Field
-     * @return the name of the Feed Url Field
-     */
-    public String getFieldFeedUrl() {
-
-        return prop.getProperty("Field_FeedURL");
-    }    /**
-     * Get the name of the Pulished Date Field
-     * @return the name of the Published Date Field
-     */
-    public String getFieldPublishedDate() {
-
-        return prop.getProperty("Field_PublishedDate");
-    }
-    /**
-     * Get the name of the Retrieved Date Field
-     * @return the name of the Retrieved Date Field
-     */
-    public String getFieldRetrievedDate() {
-
-        return prop.getProperty("Field_RetrievedDate");
-    }    /**
-     * Get the name of the Page Number Field
-     * @return the name of the Page Number Field
-     */
-    public String getFieldPageNumber() {
-
-        return prop.getProperty("Field_PageNumber");
-    }
-    /**
-     * Get the name of the References Number Field
-     * @return the name of the References Number Field
-     */
-    public String getFieldReferencesNumber() {
-
-        return prop.getProperty("Field_ReferencesNumber");
-    }
-    /**
-     * Get the name of the References Field
-     * @return the name of the References Field
-     */
-    public String getFieldReferences() {
-
-        return prop.getProperty("Field_References");
-    }
-    /**
-     * Get the name of the HTML code Field
-     * @return the name of the HTML code Field
-     */
-    public String getFieldHTMLcode() {
-
-        return prop.getProperty("Field_HTMLcode");
-    }
-    /**
-     * Get the name of the Author Field
-     * @return the name of the Author Field
-     */
-    public String getFieldAuthor() {
-
-        return prop.getProperty("Field_Author");
-    }
-    /**
-     * Get the name of the Summary Field
-     * @return the name of the Summary Field
-     */
-    public String getFieldSummary() {
-
-        return prop.getProperty("Field_Summary");
-    }
-    /**
-     * Get the name of the Content Field
-     * @return the name of the Content Field
-     */
-    public String getFieldContent() {
-
-        return prop.getProperty("Field_Content");
-    }
-    /**
-     * Get the name of the Language Field
-     * @return the name of the Language Field
-     */
-    public String getFieldLanguage() {
-
-        return prop.getProperty("Field_Language");
-    }
-    /**
-     * Get the name of the Comments Counter
-     * @return the name of the Comments Counter
-     */
-    public String getFieldCommentsCounter() {
-
-        return prop.getProperty("Field_CommentsCounter");
-    }
-
 }
